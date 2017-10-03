@@ -1,0 +1,7 @@
+<h1><%= @cuisine.name %></h1>
+
+<p>Nenhuma receita encontrada para este tipo de cozinha</p>
+
+<% @recipes.each do |recipe| %>
+  <h1><%= recipe.title  %></h1>
+<% end %>

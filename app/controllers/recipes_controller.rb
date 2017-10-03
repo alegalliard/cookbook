@@ -13,6 +13,8 @@ class RecipesController < ApplicationController
     redirect_to recipe_url(@recipe.id)
   end
 
+  private
+  
   def recipe_params
     params.require(:recipe).permit(:title,
                                     :recipe_type,
