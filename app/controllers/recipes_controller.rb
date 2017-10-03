@@ -8,14 +8,14 @@ class RecipesController < ApplicationController
   end
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
 
     if @recipe.save
       redirect_to recipe_url(@recipe.id)
     else
       flash[:error] = 'Você deve informar todos os dados da receita'
+      @cuisines = Cuisine.all
       render :new
-    end    
+    end
   end
 
   private
