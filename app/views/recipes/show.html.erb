@@ -3,7 +3,7 @@
 
 <p>
   Tipo da Receita: <%= @recipe.recipe_type %>
-  Culinária: <%= @recipe.cuisine %>
+  Culinária: <%= link_to @recipe.cuisine.name, @recipe  %>
   Dificuldade: <%= @recipe.difficulty %>
   Tempo: <%= @recipe.cook_time %> minutos
 </p>

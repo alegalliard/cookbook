@@ -8,6 +8,6 @@
     <li><%= recipe.difficulty  %></li>
     <li><%= recipe.recipe_type  %></li>
     <li><%= recipe.cook_time  %> minutos</li>
-    <li><%= recipe.cuisine  %></li>
+    <li><%= link_to recipe.cuisine.name, @cuisines  %></li>
   </ul>
 <% end %>
