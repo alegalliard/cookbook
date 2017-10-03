@@ -10,11 +10,16 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.save
 
-    redirect_to recipe_url(@recipe.id)
+    if @recipe.save
+      redirect_to recipe_url(@recipe.id)
+    else
+      flash[:error] = 'Você deve informar todos os dados da receita'
+      render :new
+    end    
   end
 
   private
-  
+
   def recipe_params
     params.require(:recipe).permit(:title,
                                     :recipe_type,
