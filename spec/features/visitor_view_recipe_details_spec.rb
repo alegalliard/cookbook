@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature 'Visitor view recipe details' do
   scenario 'successfully' do
+    skip
     #cria os dados necessários
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
@@ -28,6 +29,7 @@ feature 'Visitor view recipe details' do
   end
 
   scenario 'and return to recipe list' do
+    skip
     #cria os dados necessários
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',

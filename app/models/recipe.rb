@@ -9,4 +9,5 @@ class Recipe < ApplicationRecord
   # validates :method presence: true
 
   belongs_to :cuisine
+  belongs_to :recipe_type
 end

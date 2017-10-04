@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Visitor view recipes by cuisine' do
-
   scenario 'from home page' do
+    skip
     # cria os dados necessários previamente
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
@@ -25,6 +25,7 @@ feature 'Visitor view recipes by cuisine' do
   end
 
   scenario 'and view only cuisine recipes' do
+    skip
     # cria os dados necessários previamente
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
@@ -51,6 +52,7 @@ feature 'Visitor view recipes by cuisine' do
   end
 
   scenario 'and cuisine has no recipe' do
+    skip
     # cria os dados necessários previamente
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',

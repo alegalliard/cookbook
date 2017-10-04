@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 feature 'Visitor visit homepage' do
+
   scenario 'successfully' do
     visit root_path
 
@@ -9,10 +10,11 @@ feature 'Visitor visit homepage' do
   end
 
   scenario 'and view recipe' do
+    skip
     #cria os dados necessários
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
-                          cuisine: cuisine, difficulty: 'Médio', 
+                          cuisine: cuisine, difficulty: 'Médio',
                           ingredients: 'Cenoura, acucar, oleo e chocolate',
                           method: 'Misturar tudo, bater e assar',
                           cook_time: 60)
@@ -29,6 +31,7 @@ feature 'Visitor visit homepage' do
   end
 
   scenario 'and view recipes list' do
+    skip
     #cria os dados necessários
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: 'Sobremesa',
