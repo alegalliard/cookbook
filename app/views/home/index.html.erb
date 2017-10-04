@@ -6,7 +6,7 @@
   <h1><%= link_to recipe.title, recipe  %></h1>
   <ul>
     <li><%= recipe.difficulty  %></li>
-    <li><%= link_to recipe.recipe_type.name, recipe.recipe_type  %></li>
+    <li><%= recipe.recipe_type.name  %></li>
     <li><%= recipe.cook_time  %> minutos</li>
     <li><%= recipe.cuisine.name  %></li>
   </ul>
@@ -19,10 +19,5 @@
 <% end %>
 
 <% @recipe_types.each do |recipe_type| %>
-  <h1><%= recipe_type.name  %></h1>
+  <h1><%= link_to recipe_type.name, recipe_type  %></h1>
 <% end %>
-
-<!-- < % form_for(@recipe_types) do |f| % >
-  < %= f.label :name, 'Entrada'  % >
-  < %= f.text_field :name % >
-< % end % > -->

@@ -1,8 +1,7 @@
 class Recipe < ApplicationRecord
-  # include ActiveModel::Validations
 
   validates :title, presence: true
-  validates_associated :recipe_type_id
+  # validates_associated :recipe_type_id
   #validates_associated :cuisine
   # validates :cuisine_id, presence: true
   # validates :difficulty, presence: true
