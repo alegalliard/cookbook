@@ -1,0 +1,4 @@
+<% if @recipe.errors.any? %>
+  <div class="error">Não pode haver campos em branco</div>
+<% end %>
+<%= render partial: "form", locals: {texto_botao: 'Salvar'} %>
