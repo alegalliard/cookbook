@@ -1,4 +1,11 @@
-<%= flash[:error] %>
+<% if @cuisine.errors.any? %>
+  <ul>
+    <% @cuisine.errors.full_messages.each do |msg| %>
+      <li class="error"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for(@cuisine) do |f| %>
   <%= f.label :name, 'Nome'  %>
   <%= f.text_field :name %>

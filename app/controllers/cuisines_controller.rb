@@ -11,7 +11,6 @@ class CuisinesController < ApplicationController
     if @cuisine.save
       redirect_to cuisine_url(@cuisine.id)
     else
-      flash[:error] = 'Você deve informar o nome da cozinha'
       render :new
     end
   end

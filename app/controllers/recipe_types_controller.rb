@@ -10,7 +10,6 @@ class RecipeTypesController < ApplicationController
     if @recipe_type.save
       redirect_to recipe_type_url(@recipe_type.id)
     else
-      flash[:error] = 'Você deve informar o nome do tipo de receita'
       render :new
     end
   end

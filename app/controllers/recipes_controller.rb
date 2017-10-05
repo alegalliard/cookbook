@@ -28,6 +28,13 @@ class RecipesController < ApplicationController
       render :edit
     end
   end
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    if @recipe.destroy
+      flash[:error] = 'Receita deletada com sucesso'
+      redirect_to root_path
+    end
+  end
 
   def create
     @recipe = Recipe.new(recipe_params)
