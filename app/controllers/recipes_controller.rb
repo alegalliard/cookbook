@@ -58,6 +58,7 @@ class RecipesController < ApplicationController
                                     :difficulty,
                                     :cook_time,
                                     :ingredients,
-                                    :method)
+                                    :method,
+                                    :favorite)
   end
 end

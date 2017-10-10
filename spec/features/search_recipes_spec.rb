@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 feature 'search recipes' do
+
   scenario 'search recipe by name and get results'do
+  skip
     cuisine = Cuisine.create(name: 'Italiana')
     recipe_type = RecipeType.create(name: 'Prato principal')
 

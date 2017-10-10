@@ -5,10 +5,11 @@
   <%= f.label :recipe_type_id, 'Tipo da Receita'  %>
   <%= f.collection_select(:recipe_type_id, @recipe_types,
                           :id, :name,
-                          include_blank: true) %>
+                          { include_blank: true },
+                          { class: 'browser-default' }) %>
   <br>
   <%= f.label :cuisine_id, 'Cozinha'  %>
-  <%= f.collection_select(:cuisine_id, @cuisines, :id, :name) %>
+  <%= f.collection_select(:cuisine_id, @cuisines, :id, :name, { class: 'browser-default' }) %>
   <br>
   <%= f.label :difficulty, 'Dificuldade'  %>
   <%= f.text_field :difficulty %>
@@ -21,6 +22,9 @@
   <br>
   <%= f.label :method, 'Como Preparar'  %>
   <%= f.text_area :method %>
+
+  <%= f.label :favorite, 'Favorito' %>
+  <%= f.check_box(:favorite, {checked:true},  {class: 'browser-default' })  %>
   <br>
   <%= f.submit texto_botao %>
 <% end %>
